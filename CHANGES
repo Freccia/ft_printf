@@ -1,0 +1,4 @@
+ft_strjoin() FIXED in ft_ls. TODO
+ft_strcpy() SECURIZED in ft_ls. TODO
+ft_strlen() SECURIZED in ft_ls. TODO
+ft_nbr_size() MOVED to ft_nbrlen, and other changes on that function
