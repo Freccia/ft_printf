@@ -1,30 +1,30 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfabbro <lfabbro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 18:55:56 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 18:55:58 by lfabbro          ###   ########.fr       */
+/*   Created: 2016/09/21 14:06:31 by lfabbro           #+#    #+#             */
+/*   Updated: 2016/09/21 14:07:41 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+long		ft_pow(int nb, int pow)
 {
 	int		i;
+	long	tot;
 
-	i = 0;
-	if (src)
+	i = 1;
+	if (pow == 0)
+		return (1);
+	tot = nb;
+	while (i < pow)
 	{
-		while (src[i] != '\0')
-		{
-			dst[i] = src[i];
-			++i;
-		}
-		dst[i] = '\0';
+		tot *= nb;
+		++i;
 	}
-	return (dst);
+	return (tot);
 }

@@ -6,13 +6,20 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 19:09:45 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/03/10 16:26:02 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/21 13:01:47 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+/*
+**
+** DESCRIPTION:
+**     Outputs the integer n to the standard output.
+**
+*/
+
+void		ft_putnbr(int n)
 {
 	unsigned int	nb;
 

@@ -6,13 +6,26 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 15:47:04 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/01/18 13:54:46 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/21 13:16:06 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_num_of_w(char const *s, char c)
+/*
+**
+** DESCRIPTION:
+**     Allocates (with malloc(3)) and returns an array of “fresh”
+**     strings (all ending with ’\0’, including the array itself) obtained
+**     by spliting s using the character c as a delimiter.
+**     If the allocation fails the function returns NULL.
+**     Example:
+**     ft_strsplit("*hello*fellow***students*", ’*’)
+**     returns the array: ["hello", "fellow", "students"].
+**
+*/
+
+static size_t	ft_split_count_words(char const *s, char c)
 {
 	size_t	nw;
 
@@ -20,26 +33,26 @@ static size_t	ft_num_of_w(char const *s, char c)
 	while (*s)
 	{
 		while (*s == c && *s)
-			s++;
+			++s;
 		if (*s != c && *s)
 		{
-			nw++;
+			++nw;
 			while (*s != c && *s)
-				s++;
+				++s;
 		}
 	}
 	return (nw);
 }
 
-static size_t	ft_strlen_c(char const *s, char c)
+static size_t	ft_strlen_ch(char const *s, char c)
 {
 	size_t		len;
 
 	len = 0;
 	while (*s != c && *s)
 	{
-		len++;
-		s++;
+		++len;
+		++s;
 	}
 	return (len);
 }
@@ -50,38 +63,36 @@ static char		*cp_word(char const *s, char c)
 	int		i;
 
 	i = 0;
-	str = NULL;
-	if ((str = (char *)malloc(sizeof(*s) * ft_strlen_c(s, c) + 1)) == NULL)
+	if ((str = ft_strnew(ft_strlen_ch(s, c))) == NULL)
 		return (NULL);
 	while (s[i] != c && s[i])
 	{
 		str[i] = s[i];
-		i++;
+		++i;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-char			**justforpleasure(char const *s, char c, int j)
+char			**ft_split_return(char const *s, char c, int nw)
 {
 	char	**tab;
-	size_t	nw;
+	int		j;
 
 	tab = NULL;
-	nw = ft_num_of_w(s, c);
 	j = 0;
 	if ((tab = (char **)malloc(sizeof(char*) * nw + 1)) == NULL)
 		return (NULL);
 	while (*s)
 	{
 		while (*s == c && *s)
-			s++;
+			++s;
 		if (*s != c && *s)
 		{
 			tab[j] = NULL;
 			tab[j] = cp_word(s, c);
-			s += ft_strlen_c(s, c);
-			j++;
+			s += ft_strlen_ch(s, c);
+			++j;
 		}
 	}
 	tab[j] = NULL;
@@ -90,10 +101,12 @@ char			**justforpleasure(char const *s, char c, int j)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	char		**tab;
+	size_t	nw;
 
-	tab = justforpleasure(s, c, 0);
 	if (s)
-		return (tab);
-	return (0);
+	{
+		nw = ft_split_count_words(s, c);
+		return (ft_split_return(s, c, nw));
+	}
+	return (NULL);
 }
