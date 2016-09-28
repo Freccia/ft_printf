@@ -6,7 +6,7 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:44:33 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 14:10:50 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:45:44 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 # define LIBFT_H
 
 /*
-**
 **	string.h:
 **			+NULL  +size_t
 **	stdlib.h:
 **			+malloc  +free
 **	unistd.h:
 **			+write
-**
-**
 */
 # include <string.h>
 # include <stdlib.h>
@@ -72,7 +69,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-
 
 /*
 **	STR
@@ -135,7 +131,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 int					ft_abs(int num);
 long				ft_pow(int n, int p);
-
 
 /*
 ** OTHERS

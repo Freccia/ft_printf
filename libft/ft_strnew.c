@@ -6,11 +6,12 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:57:06 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 12:21:45 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/21 22:31:28 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*
 ** DESCRIPTION:
@@ -22,16 +23,15 @@
 char	*ft_strnew(size_t size)
 {
 	char	*space;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if ((space = malloc(sizeof(char) * size)) == NULL)
 		return (NULL);
-	while ((size_t)i < size)
+	while (i < size)
 	{
 		space[i] = '\0';
 		++i;
 	}
-	space[i] = '\0';
 	return (space);
 }

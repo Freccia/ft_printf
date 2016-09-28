@@ -6,7 +6,7 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:44:33 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/15 18:40:41 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 13:49:33 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-
 
 /*
 **	STR
@@ -125,7 +124,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 int					ft_abs(int num);
 int					ft_pow(int n, int p);
-
 
 /*
 ** OTHERS

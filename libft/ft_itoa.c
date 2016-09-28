@@ -6,20 +6,18 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 18:05:33 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 12:57:04 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:38:20 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 /*
-**
 ** DESCRIPTION:
 **     Allocate (with malloc(3)) and returns a “fresh” string ending
 **     with ’\0’ representing the integer n given as argument.
 **     Negative numbers must be supported. If the allocation fails,
 **     the function returns NULL.
-**
 */
 
 static int		ft_nb_len(unsigned int n)
@@ -63,7 +61,7 @@ static char		*ft_itoa_nbc(unsigned int nb, int nb_len, int sign)
 	return (nbc);
 }
 
-static char 	*ft_itoa_zero(void)
+static char		*ft_itoa_zero(void)
 {
 	char			*nbc;
 
@@ -72,7 +70,6 @@ static char 	*ft_itoa_zero(void)
 	nbc[0] = '0';
 	nbc[1] = '\0';
 	return (nbc);
-
 }
 
 char			*ft_itoa(int n)

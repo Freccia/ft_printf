@@ -91,10 +91,10 @@ $(NAME) :
 all : $(NAME)
 
 clean :
-	@rm -rfv $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean : clean
-	@rm -rfv $(NAME)
+	@rm -rf $(NAME)
 
 re : fclean all
 

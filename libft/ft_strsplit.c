@@ -6,14 +6,13 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 15:47:04 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 13:16:06 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:45:22 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**
 ** DESCRIPTION:
 **     Allocates (with malloc(3)) and returns an array of “fresh”
 **     strings (all ending with ’\0’, including the array itself) obtained
@@ -22,7 +21,6 @@
 **     Example:
 **     ft_strsplit("*hello*fellow***students*", ’*’)
 **     returns the array: ["hello", "fellow", "students"].
-**
 */
 
 static size_t	ft_split_count_words(char const *s, char c)

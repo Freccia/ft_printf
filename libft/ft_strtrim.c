@@ -6,14 +6,13 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 12:00:18 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 13:14:37 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:45:09 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**
 ** DESCRIPTION:
 **     Allocates (with malloc(3)) and returns a copy of the string
 **     given as argument without whitespaces at the beginning or at
@@ -28,7 +27,6 @@
 **     sl = s len;
 **     bw = backward skip;
 **     fw = forward skip;
-**
 */
 
 static char		*ft_trim_cp(char const *s, int cl, int fw)

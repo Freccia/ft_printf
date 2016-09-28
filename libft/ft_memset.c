@@ -6,7 +6,7 @@
 /*   By: lfabbro <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:11:22 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/04/10 17:36:59 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:39:11 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*void	*ft_memset(void *b, int c, size_t len)
-  {
-  int				i;
-  unsigned char	*pt;
-
-  i = 0;
-  pt = b;
-  while (len--)
-  {
-  pt[i] = ((unsigned char)c);
-  i++;
-  }
-  return (b);
-  }*/

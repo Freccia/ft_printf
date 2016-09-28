@@ -6,13 +6,14 @@
 /*   By: lfabbro <lfabbro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 14:59:28 by lfabbro           #+#    #+#             */
-/*   Updated: 2016/09/21 11:39:26 by lfabbro          ###   ########.fr       */
+/*   Updated: 2016/09/28 10:32:57 by lfabbro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* DESCRIPTION:
+/*
+** DESCRIPTION:
 **     Returns num's absolute value
 */
 
